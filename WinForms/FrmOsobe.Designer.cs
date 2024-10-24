@@ -220,7 +220,7 @@
             // 
             // btnIzbaci
             // 
-            this.btnIzbaci.Location = new System.Drawing.Point(884, 31);
+            this.btnIzbaci.Location = new System.Drawing.Point(884, 21);
             this.btnIzbaci.Name = "btnIzbaci";
             this.btnIzbaci.Size = new System.Drawing.Size(112, 23);
             this.btnIzbaci.TabIndex = 2;
