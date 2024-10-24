@@ -6,5 +6,13 @@ namespace WinForms
         {
             InitializeComponent();
         }
+
+        
+
+        private void radSaOsobamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOsobe osobe = new FrmOsobe();
+            osobe.Show();
+        }
     }
 }

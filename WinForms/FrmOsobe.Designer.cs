@@ -56,6 +56,7 @@
             // 
             this.pnlOsoba.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlOsoba.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlOsoba.Controls.Add(this.btnDodajGrad);
             this.pnlOsoba.Controls.Add(this.btnDodaj);
             this.pnlOsoba.Controls.Add(this.panel3);
@@ -80,7 +81,6 @@
             this.btnDodajGrad.TabIndex = 11;
             this.btnDodajGrad.Text = "+";
             this.btnDodajGrad.UseVisualStyleBackColor = true;
-            this.btnDodajGrad.Click += new System.EventHandler(this.btnDodajGrad_Click);
             // 
             // btnDodaj
             // 
@@ -220,7 +220,8 @@
             // 
             // btnIzbaci
             // 
-            this.btnIzbaci.Location = new System.Drawing.Point(884, 21);
+            this.btnIzbaci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIzbaci.Location = new System.Drawing.Point(884, 31);
             this.btnIzbaci.Name = "btnIzbaci";
             this.btnIzbaci.Size = new System.Drawing.Size(112, 23);
             this.btnIzbaci.TabIndex = 2;
@@ -237,6 +238,7 @@
             this.Controls.Add(this.pnlOsoba);
             this.Name = "FrmOsobe";
             this.Text = "Rad sa osobama";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlOsoba.ResumeLayout(false);
             this.pnlOsoba.PerformLayout();
             this.panel3.ResumeLayout(false);
