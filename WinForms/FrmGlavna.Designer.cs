@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.osobaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.radSaOsobamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajOsobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,8 @@
             // osobaToolStripMenuItem1
             // 
             this.osobaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.radSaOsobamaToolStripMenuItem});
+            this.radSaOsobamaToolStripMenuItem,
+            this.dodajOsobuToolStripMenuItem});
             this.osobaToolStripMenuItem1.Name = "osobaToolStripMenuItem1";
             this.osobaToolStripMenuItem1.Size = new System.Drawing.Size(53, 20);
             this.osobaToolStripMenuItem1.Text = "Osoba";
@@ -78,6 +80,12 @@
             this.radSaOsobamaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.radSaOsobamaToolStripMenuItem.Text = "Rad sa osobama";
             this.radSaOsobamaToolStripMenuItem.Click += new System.EventHandler(this.radSaOsobamaToolStripMenuItem_Click);
+            // 
+            // dodajOsobuToolStripMenuItem
+            // 
+            this.dodajOsobuToolStripMenuItem.Name = "dodajOsobuToolStripMenuItem";
+            this.dodajOsobuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajOsobuToolStripMenuItem.Text = "Dodaj osobu";
             // 
             // FrmGlavna
             // 
@@ -99,5 +107,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem osobaToolStripMenuItem1;
         private ToolStripMenuItem radSaOsobamaToolStripMenuItem;
+        private ToolStripMenuItem dodajOsobuToolStripMenuItem;
     }
 }
