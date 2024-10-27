@@ -28,225 +28,282 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlOsoba = new System.Windows.Forms.Panel();
-            this.btnDodajGrad = new System.Windows.Forms.Button();
-            this.btnDodaj = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rbZenski = new System.Windows.Forms.RadioButton();
-            this.rbMuški = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbGrad = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDatumRodjenja = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIme = new System.Windows.Forms.TextBox();
-            this.pnlTabela = new System.Windows.Forms.Panel();
-            this.dgvLjudi = new System.Windows.Forms.DataGridView();
-            this.btnIzbaci = new System.Windows.Forms.Button();
-            this.pnlOsoba.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.pnlTabela.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLjudi)).BeginInit();
-            this.SuspendLayout();
+            pnlOsoba = new Panel();
+            greskeDatum = new Label();
+            greskePrezime = new Label();
+            greskeIme = new Label();
+            btnDodajGrad = new Button();
+            btnDodaj = new Button();
+            panel3 = new Panel();
+            rbZenski = new RadioButton();
+            rbMuški = new RadioButton();
+            label5 = new Label();
+            cmbGrad = new ComboBox();
+            label4 = new Label();
+            label3 = new Label();
+            txtDatumRodjenja = new TextBox();
+            label2 = new Label();
+            txtPrezime = new TextBox();
+            label1 = new Label();
+            txtIme = new TextBox();
+            pnlTabela = new Panel();
+            dgvLjudi = new DataGridView();
+            btnIzbaci = new Button();
+            datumGreska = new Label();
+            pnlOsoba.SuspendLayout();
+            panel3.SuspendLayout();
+            pnlTabela.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvLjudi).BeginInit();
+            SuspendLayout();
             // 
             // pnlOsoba
             // 
-            this.pnlOsoba.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnlOsoba.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlOsoba.Controls.Add(this.btnDodajGrad);
-            this.pnlOsoba.Controls.Add(this.btnDodaj);
-            this.pnlOsoba.Controls.Add(this.panel3);
-            this.pnlOsoba.Controls.Add(this.cmbGrad);
-            this.pnlOsoba.Controls.Add(this.label4);
-            this.pnlOsoba.Controls.Add(this.label3);
-            this.pnlOsoba.Controls.Add(this.txtDatumRodjenja);
-            this.pnlOsoba.Controls.Add(this.label2);
-            this.pnlOsoba.Controls.Add(this.txtPrezime);
-            this.pnlOsoba.Controls.Add(this.label1);
-            this.pnlOsoba.Controls.Add(this.txtIme);
-            this.pnlOsoba.Location = new System.Drawing.Point(124, 60);
-            this.pnlOsoba.Name = "pnlOsoba";
-            this.pnlOsoba.Size = new System.Drawing.Size(365, 420);
-            this.pnlOsoba.TabIndex = 0;
+            pnlOsoba.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pnlOsoba.BackColor = SystemColors.ActiveCaption;
+            pnlOsoba.Controls.Add(datumGreska);
+            pnlOsoba.Controls.Add(greskeDatum);
+            pnlOsoba.Controls.Add(greskePrezime);
+            pnlOsoba.Controls.Add(greskeIme);
+            pnlOsoba.Controls.Add(btnDodajGrad);
+            pnlOsoba.Controls.Add(btnDodaj);
+            pnlOsoba.Controls.Add(panel3);
+            pnlOsoba.Controls.Add(cmbGrad);
+            pnlOsoba.Controls.Add(label4);
+            pnlOsoba.Controls.Add(label3);
+            pnlOsoba.Controls.Add(txtDatumRodjenja);
+            pnlOsoba.Controls.Add(label2);
+            pnlOsoba.Controls.Add(txtPrezime);
+            pnlOsoba.Controls.Add(label1);
+            pnlOsoba.Controls.Add(txtIme);
+            pnlOsoba.Location = new Point(142, 80);
+            pnlOsoba.Margin = new Padding(3, 4, 3, 4);
+            pnlOsoba.Name = "pnlOsoba";
+            pnlOsoba.Size = new Size(417, 560);
+            pnlOsoba.TabIndex = 0;
+            pnlOsoba.Paint += pnlOsoba_Paint;
+            // 
+            // greskeDatum
+            // 
+            greskeDatum.AutoSize = true;
+            greskeDatum.ForeColor = Color.Lime;
+            greskeDatum.Location = new Point(162, 204);
+            greskeDatum.Name = "greskeDatum";
+            greskeDatum.Size = new Size(0, 20);
+            greskeDatum.TabIndex = 14;
+            // 
+            // greskePrezime
+            // 
+            greskePrezime.AutoSize = true;
+            greskePrezime.Location = new Point(161, 144);
+            greskePrezime.Name = "greskePrezime";
+            greskePrezime.Size = new Size(0, 20);
+            greskePrezime.TabIndex = 13;
+            // 
+            // greskeIme
+            // 
+            greskeIme.AutoSize = true;
+            greskeIme.Location = new Point(161, 84);
+            greskeIme.Name = "greskeIme";
+            greskeIme.Size = new Size(0, 20);
+            greskeIme.TabIndex = 12;
+            greskeIme.TextAlign = ContentAlignment.TopCenter;
             // 
             // btnDodajGrad
             // 
-            this.btnDodajGrad.Location = new System.Drawing.Point(298, 175);
-            this.btnDodajGrad.Name = "btnDodajGrad";
-            this.btnDodajGrad.Size = new System.Drawing.Size(38, 23);
-            this.btnDodajGrad.TabIndex = 11;
-            this.btnDodajGrad.Text = "+";
-            this.btnDodajGrad.UseVisualStyleBackColor = true;
+            btnDodajGrad.Location = new Point(341, 233);
+            btnDodajGrad.Margin = new Padding(3, 4, 3, 4);
+            btnDodajGrad.Name = "btnDodajGrad";
+            btnDodajGrad.Size = new Size(43, 31);
+            btnDodajGrad.TabIndex = 11;
+            btnDodajGrad.Text = "+";
+            btnDodajGrad.UseVisualStyleBackColor = true;
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(61, 276);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(295, 29);
-            this.btnDodaj.TabIndex = 10;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = true;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            btnDodaj.Location = new Point(70, 368);
+            btnDodaj.Margin = new Padding(3, 4, 3, 4);
+            btnDodaj.Name = "btnDodaj";
+            btnDodaj.Size = new Size(337, 39);
+            btnDodaj.TabIndex = 10;
+            btnDodaj.Text = "Dodaj";
+            btnDodaj.UseVisualStyleBackColor = true;
+            btnDodaj.Click += btnDodaj_Click;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.rbZenski);
-            this.panel3.Controls.Add(this.rbMuški);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(61, 213);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(295, 57);
-            this.panel3.TabIndex = 9;
+            panel3.Controls.Add(rbZenski);
+            panel3.Controls.Add(rbMuški);
+            panel3.Controls.Add(label5);
+            panel3.Location = new Point(70, 284);
+            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(337, 76);
+            panel3.TabIndex = 9;
             // 
             // rbZenski
             // 
-            this.rbZenski.AutoSize = true;
-            this.rbZenski.Location = new System.Drawing.Point(84, 32);
-            this.rbZenski.Name = "rbZenski";
-            this.rbZenski.Size = new System.Drawing.Size(59, 19);
-            this.rbZenski.TabIndex = 12;
-            this.rbZenski.TabStop = true;
-            this.rbZenski.Text = "Ženski";
-            this.rbZenski.UseVisualStyleBackColor = true;
+            rbZenski.AutoSize = true;
+            rbZenski.Location = new Point(96, 43);
+            rbZenski.Margin = new Padding(3, 4, 3, 4);
+            rbZenski.Name = "rbZenski";
+            rbZenski.Size = new Size(72, 24);
+            rbZenski.TabIndex = 12;
+            rbZenski.TabStop = true;
+            rbZenski.Text = "Ženski";
+            rbZenski.UseVisualStyleBackColor = true;
             // 
             // rbMuški
             // 
-            this.rbMuški.AutoSize = true;
-            this.rbMuški.Location = new System.Drawing.Point(84, 7);
-            this.rbMuški.Name = "rbMuški";
-            this.rbMuški.Size = new System.Drawing.Size(57, 19);
-            this.rbMuški.TabIndex = 11;
-            this.rbMuški.TabStop = true;
-            this.rbMuški.Text = "Muski";
-            this.rbMuški.UseVisualStyleBackColor = true;
+            rbMuški.AutoSize = true;
+            rbMuški.Location = new Point(96, 9);
+            rbMuški.Margin = new Padding(3, 4, 3, 4);
+            rbMuški.Name = "rbMuški";
+            rbMuški.Size = new Size(68, 24);
+            rbMuški.TabIndex = 11;
+            rbMuški.TabStop = true;
+            rbMuški.Text = "Muski";
+            rbMuški.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Pol:";
+            label5.AutoSize = true;
+            label5.Location = new Point(53, 5);
+            label5.Name = "label5";
+            label5.Size = new Size(32, 20);
+            label5.TabIndex = 10;
+            label5.Text = "Pol:";
             // 
             // cmbGrad
             // 
-            this.cmbGrad.FormattingEnabled = true;
-            this.cmbGrad.Location = new System.Drawing.Point(140, 175);
-            this.cmbGrad.Name = "cmbGrad";
-            this.cmbGrad.Size = new System.Drawing.Size(152, 23);
-            this.cmbGrad.TabIndex = 8;
+            cmbGrad.FormattingEnabled = true;
+            cmbGrad.Location = new Point(160, 233);
+            cmbGrad.Margin = new Padding(3, 4, 3, 4);
+            cmbGrad.Name = "cmbGrad";
+            cmbGrad.Size = new Size(173, 28);
+            cmbGrad.TabIndex = 8;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Grad:";
+            label4.AutoSize = true;
+            label4.Location = new Point(113, 235);
+            label4.Name = "label4";
+            label4.Size = new Size(44, 20);
+            label4.TabIndex = 7;
+            label4.Text = "Grad:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Datum rođenja:";
+            label3.AutoSize = true;
+            label3.Location = new Point(51, 176);
+            label3.Name = "label3";
+            label3.Size = new Size(112, 20);
+            label3.TabIndex = 5;
+            label3.Text = "Datum rođenja:";
             // 
             // txtDatumRodjenja
             // 
-            this.txtDatumRodjenja.Location = new System.Drawing.Point(140, 127);
-            this.txtDatumRodjenja.Name = "txtDatumRodjenja";
-            this.txtDatumRodjenja.Size = new System.Drawing.Size(196, 23);
-            this.txtDatumRodjenja.TabIndex = 4;
+            txtDatumRodjenja.Location = new Point(160, 169);
+            txtDatumRodjenja.Margin = new Padding(3, 4, 3, 4);
+            txtDatumRodjenja.Name = "txtDatumRodjenja";
+            txtDatumRodjenja.Size = new Size(223, 27);
+            txtDatumRodjenja.TabIndex = 4;
+            txtDatumRodjenja.TextChanged += txtDatumRodjenja_TextChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Prezime:";
+            label2.AutoSize = true;
+            label2.Location = new Point(94, 120);
+            label2.Name = "label2";
+            label2.Size = new Size(65, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Prezime:";
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(140, 85);
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(196, 23);
-            this.txtPrezime.TabIndex = 2;
+            txtPrezime.Location = new Point(160, 113);
+            txtPrezime.Margin = new Padding(3, 4, 3, 4);
+            txtPrezime.Name = "txtPrezime";
+            txtPrezime.Size = new Size(223, 27);
+            txtPrezime.TabIndex = 2;
+            txtPrezime.TextChanged += txtPrezime_TextChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ime:";
+            label1.AutoSize = true;
+            label1.Location = new Point(119, 61);
+            label1.Name = "label1";
+            label1.Size = new Size(37, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Ime:";
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(140, 41);
-            this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(196, 23);
-            this.txtIme.TabIndex = 0;
+            txtIme.Location = new Point(160, 55);
+            txtIme.Margin = new Padding(3, 4, 3, 4);
+            txtIme.Name = "txtIme";
+            txtIme.Size = new Size(223, 27);
+            txtIme.TabIndex = 0;
+            txtIme.TextChanged += txtIme_TextChanged;
             // 
             // pnlTabela
             // 
-            this.pnlTabela.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTabela.Controls.Add(this.dgvLjudi);
-            this.pnlTabela.Location = new System.Drawing.Point(511, 60);
-            this.pnlTabela.Name = "pnlTabela";
-            this.pnlTabela.Size = new System.Drawing.Size(485, 420);
-            this.pnlTabela.TabIndex = 1;
+            pnlTabela.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlTabela.Controls.Add(dgvLjudi);
+            pnlTabela.Location = new Point(584, 80);
+            pnlTabela.Margin = new Padding(3, 4, 3, 4);
+            pnlTabela.Name = "pnlTabela";
+            pnlTabela.Size = new Size(554, 560);
+            pnlTabela.TabIndex = 1;
             // 
             // dgvLjudi
             // 
-            this.dgvLjudi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLjudi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLjudi.Location = new System.Drawing.Point(0, 0);
-            this.dgvLjudi.Name = "dgvLjudi";
-            this.dgvLjudi.Size = new System.Drawing.Size(485, 420);
-            this.dgvLjudi.TabIndex = 0;
+            dgvLjudi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLjudi.Dock = DockStyle.Fill;
+            dgvLjudi.Location = new Point(0, 0);
+            dgvLjudi.Margin = new Padding(3, 4, 3, 4);
+            dgvLjudi.Name = "dgvLjudi";
+            dgvLjudi.RowHeadersWidth = 51;
+            dgvLjudi.Size = new Size(554, 560);
+            dgvLjudi.TabIndex = 0;
             // 
             // btnIzbaci
             // 
-            this.btnIzbaci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIzbaci.Location = new System.Drawing.Point(884, 31);
-            this.btnIzbaci.Name = "btnIzbaci";
-            this.btnIzbaci.Size = new System.Drawing.Size(112, 23);
-            this.btnIzbaci.TabIndex = 2;
-            this.btnIzbaci.Text = "Izbaci";
-            this.btnIzbaci.UseVisualStyleBackColor = true;
+            btnIzbaci.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnIzbaci.Location = new Point(1010, 41);
+            btnIzbaci.Margin = new Padding(3, 4, 3, 4);
+            btnIzbaci.Name = "btnIzbaci";
+            btnIzbaci.Size = new Size(128, 31);
+            btnIzbaci.TabIndex = 2;
+            btnIzbaci.Text = "Izbaci";
+            btnIzbaci.UseVisualStyleBackColor = true;
+            // 
+            // datumGreska
+            // 
+            datumGreska.AutoSize = true;
+            datumGreska.Location = new Point(165, 198);
+            datumGreska.Name = "datumGreska";
+            datumGreska.Size = new Size(0, 20);
+            datumGreska.TabIndex = 15;
             // 
             // FrmOsobe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 591);
-            this.Controls.Add(this.btnIzbaci);
-            this.Controls.Add(this.pnlTabela);
-            this.Controls.Add(this.pnlOsoba);
-            this.Name = "FrmOsobe";
-            this.Text = "Rad sa osobama";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.pnlOsoba.ResumeLayout(false);
-            this.pnlOsoba.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.pnlTabela.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLjudi)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1169, 788);
+            Controls.Add(btnIzbaci);
+            Controls.Add(pnlTabela);
+            Controls.Add(pnlOsoba);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "FrmOsobe";
+            Text = "Rad sa osobama";
+            WindowState = FormWindowState.Maximized;
+            pnlOsoba.ResumeLayout(false);
+            pnlOsoba.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            pnlTabela.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvLjudi).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -269,5 +326,9 @@
         private Panel pnlTabela;
         private DataGridView dgvLjudi;
         private Button btnIzbaci;
+        private Label greskeDatum;
+        private Label greskePrezime;
+        private Label greskeIme;
+        private Label datumGreska;
     }
 }
